@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Alphabet</title>
+    <style>
+      body {
+        width: min(50%, 800px);
+        margin: 0 auto;
+        font-family: sans-serif;
+      }
+
+      .lastResult{
+        padding: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alphabet Guessing Game</h1>
+    <p>
+      A letter has been selected from the letters of the alphabet, see if you
+      can guess it in 10 turns or fewer. We will tell you if your guess is too
+      high or too low
+    </p>
+    <label for="guess">Enter a guess:</label>
+    <input type="text" id="guess" class="guess" autofocus/>
+    <input type="submit" class="submit" />
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+      const alphabet = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+
+      const randomNumber = Math.floor(Math.random() * 26 );
+
+    const usersGuess = document.querySelector('.guess');
+     // Used to receive users input 
+
+    const lastResult = document.querySelector('.lastResult');
+    // use to show if guess is right or wrong
+
+    const lowOrHi = document.querySelector('.lowOrHi');
+    // Tells if the the user is high or low
+
+    const guesses = document.querySelector('.guesses');
+    // shows users previous guesses
+
+    const submitGuess = document.querySelector('.submit');
+    // The sumbit button
+
+    let guessCount = 1;
+    let resetbutton;
+
+    </script>
+  </body>
+</html>
